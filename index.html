@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<div class="page-wrapper">
+	<div class="inner-wrapper" id="mini-about">
+		<div class="top-headline-photo">
+			<div class="sm-1-col md-2-col lg-2-col pull-left">
+				<h1>{% if site.greeting %}{{ site.greeting }}{% else %}{{ "Hello, I'm Simpol." }}{% endif %}
+				</h1>
+			</div><!-- end .sm-1-col lg-2-col pull-left -->
+			<div class="sm-1-col md-2-col lg-2-col pull-right small-mobile-hide">
+				<img src="{{ site.baseurl }}/assets/img/simpol-logo-x800.jpg" alt="Simpol Theme">
+			</div><!-- end. sm-1-col lg-2-col pull-right mobile-hide -->
+		</div><!-- end .top-headline-photo -->
+
+		<div class="sm-1-col md-2-col lg-2-col pull-left">
+			<p>{% if site.subgreetingone %}{{ site.subgreetingone }}{% else %}{{ "Jekyll theme that's all about the content." }}{% endif %}
+			</p>
+		</div><!-- end .sm-1-col lg-2-col pull-left -->
+		<div class="sm-1-col md-2-col lg-2-col pull-right">
+			<p>{% if site.subgreetingone %}{{ site.subgreetingone }}{% else %}{{ "Minimal, clean, simple blogging." }}{% endif %}
+			</p>
+		</div><!-- end. sm-1-col lg-2-col pull-right -->
+	</div><!-- end .inner-wrapper #mini-about -->
+
+	<hr>
+
+	<div class="inner-wrapper">
+		<p>Many more features and integrations, such as auto-publish Simpol Theme's blog articles to Medium.com, are being built.</p>
+
+		<h2>Features</h2>
+
+		<ul>
+			<li>Minimal design and feel</li>
+			<li>Clean, default layouts for pages and posts</li>
+			<li>Head with optimized metadata (titles and descriptions)</li>
+			<li>Simple Google Analytics integration: simply input your tracking ID in config file</li>
+			<li>Single, yet powerful CSS Stylesheet (3 breakpoints/media queries)</li>
+			<li>Sitemap and 404 Page</li>
+			<li>Gems: Using Jekyll, Jekyll Paginate and Feed</li>
+		</ul>
+
+		<h2>More info about the launch, coming soon</h2>
+
+		<p>Simpol Theme is designed, developed, and maintained by Scott Mathson, Mathson Design Co.</p>
+
+		<a href="https://simpol-theme.github.io/simpol-theme-jekyll/">
+			<button class="btn-primary">View Full Demo</button>
+		</a>
+
+		<p class="smaller"><em>Please send feature requests to simpol@scottmathson.me</em></p>
+	</div><!-- end .inner-wrapper -->
+
+</div><!-- end .page-wrapper -->

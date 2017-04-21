@@ -1,0 +1,36 @@
+# Site settings
+title: Simpol Theme - Minimal website theme all about the writing, the content
+subtitle: "Focus on the writing, the content."
+description: "Simpol Theme is a clean, minimal website theme all about the writing, the content. Currently available for Jekyll. Perfect for blogging."
+baseurl: ""
+google_tracking_id: # DEV Site
+
+copyright_name: Scott Mathson
+
+url: "https://simpoltheme.com"   # with the https protocol
+enforce_ssl: simpoltheme.com   # without any protocol
+
+# SEO data (https://github.com/jekyll/jekyll-seo-tag)
+author:
+  name: Simpol Theme
+  email: simpol@scottmathson.me
+  twitter: simpoltheme
+
+social:
+name: Simpol Theme
+links:
+  - https://twitter.com/simpoltheme
+  - https://github.com/simpol-theme
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+paginate: 12
+
+jekyll-archives:
+  enabled:
+    - categories
+
+gems: ["jekyll-archives","jekyll-sitemap","jekyll-seo-tag","jekyll-feed","jekyll-paginate"]
+
+exclude: ["Gemfile","Gemfile.lock","README.md"]

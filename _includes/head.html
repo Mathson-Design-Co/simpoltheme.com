@@ -1,0 +1,32 @@
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>{{ site.title }}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="{{ site.description }}">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/img/simpol-theme-logo.png">
+	<link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/img/simpol-theme-logo.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/img/simpol-theme-logo.png" sizes="16x16">
+
+	{% seo %}
+	{% feed_meta %}
+
+	<meta name="robots" content="index, follow">
+
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+
+	<!-- Website Custom CSS -->
+	<link rel="stylesheet" href="{{ "assets/css/styles.css" | prepend: site.baseurl }}">
+
+	<link rel="canonical" href="{{ site.baseurl }}{{ page.url }}">
+
+	<script type="text/javascript">
+		var host = "simpoltheme.com";
+		if ((host == window.location.host) && (window.location.protocol != "https:"))
+			window.location.protocol = "https";
+	</script>
+	<script src="https://gumroad.com/js/gumroad.js"></script>
+</head>
