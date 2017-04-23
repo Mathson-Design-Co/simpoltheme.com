@@ -3,7 +3,7 @@ title: Simpol Theme - Minimal website theme all about the writing, the content
 subtitle: "Focus on the writing, the content."
 description: "Simpol Theme is a clean, minimal website theme all about the writing, the content. Currently available for Jekyll. Perfect for blogging."
 baseurl: ""
-google_tracking_id: # DEV Site
+google_tracking_id: UA-89344165-3
 
 copyright_name: Scott Mathson
 
@@ -31,6 +31,6 @@ jekyll-archives:
   enabled:
     - categories
 
-gems: ["jekyll-archives","jekyll-sitemap","jekyll-seo-tag","jekyll-feed","jekyll-paginate"]
+gems: ["jekyll-sitemap","jekyll-seo-tag","jekyll-feed","jekyll-paginate"]
 
 exclude: ["Gemfile","Gemfile.lock","README.md"]

@@ -98,7 +98,7 @@ a:focus {
 }
 button:hover,
 button:focus {
-  color: #eee;
+  color: #dedede;
   outline-width: 0;
   text-decoration: none;
 }
@@ -106,7 +106,7 @@ blockquote {
   margin: 0 auto;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   padding: 2%;
-  border-left: 4px solid #eee;
+  border-left: 4px solid #dedede;
 }
 ul {
   list-style-type: circle;
@@ -126,7 +126,7 @@ code {
   font-weight: 400;
   font-size: .8rem;
   padding: 2px;
-  color: #ededed;
+  color: #dedede;
   overflow: auto;
 }
 .mono {
@@ -180,7 +180,6 @@ code {
     font-size: 0.95em;
   }
   #mini-about img {
-    border-radius: 50%;
     width: 20%;
   }
   .smaller {

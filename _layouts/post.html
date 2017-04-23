@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<div class="page-wrapper">
+  <!-- Post Header -->
+	<h1>{{ page.title }}</h1>
+	<p class="mono smaller">Published on {{ page.date | date: "%B %-d, %Y" }} By {{ page.author }}
+	</p>
+	<hr>
+
+  <!-- Post Content -->
+  <article>
+	  {{ content }}
+    <div class="pager flex">
+      {% if page.previous.url %}
+        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" class="previous btn-primary" title="{{page.previous.title}}">&larr; Previous Post</a>
+      {% endif %}
+      {% if page.next.url %}
+        <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" class="btn-primary" title="{{page.next.title}}">Next Post &rarr;</a>
+      {% endif %}
+    </div><!-- end .pager flex -->
+  </article>
+</div><!-- end .page-wrapper -->
