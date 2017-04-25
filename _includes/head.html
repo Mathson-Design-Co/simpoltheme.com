@@ -1,27 +1,21 @@
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>{{ site.title }}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="{{ site.description }}">
+	<!-- Backup, in lieu of jekyll-seo gem -->
+	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title | default: site.github.repository_name }}{% endif %}</title>
+	<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+	<meta name="robots" content="index, follow">
+	<!-- End SEO backup -->
 
-	<link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/img/simpol-theme-logo.png">
-	<link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/img/simpol-theme-logo.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/img/simpol-theme-logo.png" sizes="16x16">
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+	<link rel="canonical" href="{{ site.baseurl }}{{ page.url }}">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/img/simpol-favicon.png">
+	<link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/img/simpol-favicon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/img/simpol-favicon.png" sizes="16x16">
 
 	{% seo %}
 	{% feed_meta %}
-
-	<meta name="robots" content="index, follow">
-
-	<meta property="og:type" content="website">
-	<meta property="og:locale" content="en_us">
-	<meta property="og:url" content="{{ site.url }}{{ page.url }}">
-
-	<!-- Website Custom CSS -->
-	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
-
-	<link rel="canonical" href="{{ site.baseurl }}{{ page.url }}">
 
 	<script type="text/javascript">
 		var host = "simpoltheme.com";
@@ -29,4 +23,5 @@
 			window.location.protocol = "https";
 	</script>
 	<script src="https://gumroad.com/js/gumroad.js"></script>
+	<script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
 </head>
