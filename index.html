@@ -1,5 +1,7 @@
 ---
-layout: default
+layout: page
+title: Simpol Jekyll Theme - Open source, free Jekyll Blog
+description: Open source, free Jekyll blogging theme. Setup a Jekyll blog and start writing, fast! Focus on the writing, the content with a minimal Jekyll theme.
 ---
 
 <div class="page-wrapper">
@@ -10,16 +12,17 @@ layout: default
 				</h1>
 			</div><!-- end .sm-1-col lg-2-col pull-left -->
 			<div class="sm-1-col md-2-col lg-2-col pull-right small-mobile-hide">
-				<img src="{{ site.baseurl }}/assets/img/simpol-theme-square-writing-logo.png" alt="Simpol Theme">
+				{% if site.logo_img %}<img src="{{ site.baseurl }}{{ site.logo_img }}" alt="{{ site.title }}">
+				{% else %}<img src="{{ site.baseurl }}/assets/img/simpol-theme-square-writing-logo.png" alt="Simpol Theme Index Logo">{% endif %}
 			</div><!-- end. sm-1-col lg-2-col pull-right mobile-hide -->
 		</div><!-- end .top-headline-photo -->
 
 		<div class="sm-1-col md-2-col lg-2-col pull-left">
-			<p>{% if site.subgreetingone %}{{ site.subgreetingone }}{% else %}{{ "Jekyll theme that's all about the content." }}{% endif %}
+			<p>{% if site.subgreeting_one %}{{ site.subgreeting_one }}{% else %}{{ "Jekyll theme that's all about the content." }}{% endif %}
 			</p>
 		</div><!-- end .sm-1-col lg-2-col pull-left -->
 		<div class="sm-1-col md-2-col lg-2-col pull-right">
-			<p>{% if site.subgreetingone %}{{ site.subgreetingone }}{% else %}{{ "Minimal, clean, simple blogging." }}{% endif %}
+			<p>{% if site.subgreeting_two %}{{ site.subgreeting_two }}{% else %}{{ "Minimal, clean, simple blogging." }}{% endif %}
 			</p>
 		</div><!-- end. sm-1-col lg-2-col pull-right -->
 	</div><!-- end .inner-wrapper #mini-about -->
@@ -27,39 +30,47 @@ layout: default
 	<hr>
 
 	<div class="inner-wrapper">
-		<p><em>Many more features and integrations, are being built, yet with a minimal approach and realization that the goal behind this theme is to make your website simple, like it should be.</em>
-		</p>
+		<br>
+		{% for post in paginator.posts %}
+		<div class="post-preview">
+			<div class="sm-1-col lg-onequarter-col pull-left">
+				{% if post.header-img %}
+					<a href="{{ post.url | prepend: site.baseurl }}" style="text-decoration:none;">
+						<img class="post-header-img" src="{{ site.baseurl }}/{{ post.header-img }}" alt="Simpol Theme">
+					</a>
+				{% endif %}
+			</div><!-- end .sm-1-col lg-onequarter-col pull-left -->
+			<div class="sm-1-col lg-threequarter-col inline-block">
+				<a href="{{ post.url | prepend: site.baseurl }}">
+					<h2>{{ post.title }}</h2>
+				</a>
+				{% if post.description %}
+					<h4>{{ post.description }}</h4>
+				{% endif %}
+				<div class="sm-1-col lg-2-col pull-left">
+					<p class="mono smaller">Published on {{ post.date | date: "%B %-d, %Y" }}
+						<br>
+						By {{ post.author }} In <a href="{{ site.baseurl }}/categories">{{ post.categories }}</a>
+					</p>
+				</div><!-- end .sm-1-col lg-2-col pull-left -->
+				<div class="sm-1-col lg-2-col inline-block">
+					<a href="{{ post.url | prepend: site.baseurl }}">
+						<p class="post-cta btn-primary">Read more</p>
+					</a>
+				</div><!-- end .sm-1-col lg-1-col inline-block -->
+			</div><!-- end .sm-1-col lg-threequarter-col inline-block -->
+		</div><!-- end .post-preview -->
+		{% endfor %}
 
-		<h3>Simpol, focus on the writing, the content.</h3>
-
-		<h2>Features</h2>
-
-		<ul>
-			<!-- Disclaimer! This is the only inline-styles you'll see, this is not within the Simpol Theme - we keep things semantic and manageable by multiple developers. This is the one/only instance, because time.. -->
-			<li>Minimal design and feel. Fast-loading code</li>
-			<li>Simple and customizable Navigation, Index, and Footer</li>
-			<li>Site greeting, sub-greetings, links, logo, and more</li>
-			<li style="margin-left: 4%;">All easily setup and managed in the config file</li>
-			<li>Clean, light-weight, default layouts for pages and posts</li>
-			<li style="margin-left: 4%;">Search engine friendly! Optimized metadata and schema.org markup, and more (all 'bout dat SEO).</li>
-			<li style="margin-left: 4%;">Simple Google Analytics setup/integration</li>
-			<li style="margin-left: 4%;">Social sharing options for users reading the posts</li>
-			<li>Post categories and archive page</li>
-			<li>Automatically-updated XML sitemap and feed</li>
-		</ul>
-
-		<h3>Clean and simple, like your website should be.</h3>
-
-		<a href="https://simpolthe.me">
-			<button class="btn-primary">View Full Demo</button>
-		</a>
-
-		<a href="https://gum.co/simpol" target="_blank">
-			<h2>Jekyll Theme For Sale</h2>
-		</a>
-
-		<p>Simpol Theme is designed, developed, and maintained by Scott Mathson, Mathson Design Co. Please send feature requests to simpol@scottmathson.me or <a href="https://twitter.com/intent/tweet?in_reply_to=856908965778604032">tweet in-reply-to this status</a>.
-		</p>
+		{% if paginator.total_pages > 1 %}
+		<div class="pager">
+	    {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="previous btn-primary">&larr; Newer Posts</a>
+	    {% endif %}
+	    {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="btn-primary">Older Posts &rarr;</a>
+	    {% endif %}
+		</div><!-- end .pager -->
+		{% endif %}
 	</div><!-- end .inner-wrapper -->
-
 </div><!-- end .page-wrapper -->

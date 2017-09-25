@@ -98,7 +98,7 @@ a:focus {
 }
 button:hover,
 button:focus {
-  color: #dedede;
+  color: #454545;
   outline-width: 0;
   text-decoration: none;
 }
@@ -146,18 +146,6 @@ code {
   padding: 1.2%;
   text-decoration: none;
   outline: none;
-}
-.btn-secondary {
-  font-size: 1em;
-	text-align: center;
-	color: white;
-  background-color: #444;
-  border: 0px;
-  padding: 1.8%;
-  text-decoration: none;
-  outline: none;
-  width: 80%;
-  height: 5vh;
 }
 
 
@@ -290,11 +278,6 @@ code {
   nav p {
     font-size: 1em;
   }
-  .nav-section-cta {
-  	position: fixed;
-  	top: 80vh;
-  	width: 18%;
-  }
 	footer {
 		float: left;
 	  position: fixed;
@@ -355,13 +338,6 @@ footer p {
 }
 
 
-  /*--------------------------------*\
-    #PAGE-DEFAULT-404
-  \*--------------------------------*/
-  .main-404 {
-  }
-
-
 
 
 /*--------------------------------*\
@@ -376,8 +352,14 @@ footer p {
   display: table;
   clear: both;
 }
-.previous {
-  margin-right: 5%;
+.pager {
+  margin: 0 auto;
+}
+.pager a {
+  text-decoration: none;
+}
+.pager button {
+  margin: 0 auto;
 }
 .post-header-img {
   max-width: 250px;
@@ -397,3 +379,4 @@ footer p {
 .hidden {display: none;}
 .inline-block {display: inline-block;}
 .flex {display: flex;}
+.margin-left-4 {margin-left: 4%;}

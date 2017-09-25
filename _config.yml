@@ -11,20 +11,23 @@ subgreeting_one: Jekyll theme that's all about the content.
 subgreeting_two: Minimal, clean, simple blogging.
 
 #content for nav.html (shown on desktop) navigation links - use absolute urls
-nav_link_one_name: Demo
-nav_link_one_link: https://simpolthe.me
+nav_link_one_name: About
+nav_link_one_link: "/about"
 
-nav_link_two_name: Twitter
-nav_link_two_link: https://twitter.com/simpoltheme
+nav_link_two_name: Post categories
+nav_link_two_link: "/categories"
 
-nav_link_three_name: Buy the Theme
-nav_link_three_link: https://gum.co/simpol
+nav_link_three_name: Get the Theme
+nav_link_three_link: "/get-simpol-theme"
 
 baseurl: ""
 google_tracking_id: UA-89344165-3
 copyright_name: Mathson Design, LLC
 url: "https://simpoltheme.com"   # with the https protocol
 enforce_ssl: simpoltheme.com   # without any protocol
+
+#update this when new versions release
+current-version: "1.0.0"
 
 # SEO data (https://github.com/jekyll/jekyll-seo-tag)
 logo: /assets/img/simpol-favicon.png
