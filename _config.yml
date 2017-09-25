@@ -27,7 +27,7 @@ url: "https://simpoltheme.com"   # with the https protocol
 enforce_ssl: simpoltheme.com   # without any protocol
 
 #update this when new versions release
-current-version: "1.0.0"
+current-version: "1.0.4"
 
 # SEO data (https://github.com/jekyll/jekyll-seo-tag)
 logo: /assets/img/simpol-favicon.png

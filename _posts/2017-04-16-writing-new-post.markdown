@@ -19,7 +19,7 @@ All of the blog posts that syndicate into the homepage (index.html) feed and Sit
 **It's easy to add new posts**.
 
 1. Create a new file in the `_posts` folder
-2. Name the file, using this naming convention: `YYY-MM-DD-post-name.markdown` (_or .md_)
+2. Name the file, using this naming convention: `YYYY-MM-DD-post-name.markdown` (_or .md_)
 3. Write out the Front Matter (see below)
 
 As for the Front Matter, Simpol Theme incorporates and includes a few options. _Always ensure that your file's date and front matter date match up_. **Although highly recommended**, things like the `description` `author` and `header-img` are completely optional.
