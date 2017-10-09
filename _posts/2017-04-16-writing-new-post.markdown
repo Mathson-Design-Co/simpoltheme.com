@@ -12,7 +12,7 @@ categories:
 
 # Simpol Blogging: Creating Your Post
 
-After [downloading your copy of Simpol Theme](https://gumroad.com/l/simpol), you'll see the folder and files structure to be clean, consistent, and simple to understand.
+After [downloading your copy of Simpol Theme](https://github.com/scottmathson/simpol-theme/releases), you'll see the folder and files structure to be clean, consistent, and simple to understand.
 
 All of the blog posts that syndicate into the homepage (index.html) feed and Sitemap are located within the `_posts` folder.
 
